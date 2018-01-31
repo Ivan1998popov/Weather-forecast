@@ -2,6 +2,7 @@ package com.inostudio.weather_forecast.database;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 
 import java.util.List;
@@ -12,9 +13,12 @@ import java.util.List;
 @Dao
 public interface TemperatureDao {
 
-    @Query("SELECT * FROM temperature")
+    @Query("SELECT * FROM Temperature")
     List<Temperature> getAllTemperature();
 
-    @Insert
+    @Query("SELECT * FROM Temperature WHERE id = :ID")
+    Temperature getWeatherById(int ID);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(Temperature... temperatures);
 }

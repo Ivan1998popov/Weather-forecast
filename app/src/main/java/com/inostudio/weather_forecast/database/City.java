@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
 /**
  * Created by Иван on 30.01.2018.
  */
-@Entity
+@Entity(tableName = "City")
 public class City  {
     public City(String cityName) {
 

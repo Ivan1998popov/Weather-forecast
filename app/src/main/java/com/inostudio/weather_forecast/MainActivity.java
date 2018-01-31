@@ -5,8 +5,11 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.ContentValues;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.print.PrintAttributes;
+import android.print.PrintManager;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
@@ -21,8 +24,10 @@ import android.widget.TextView;
 import com.inostudio.weather_forecast.database.AppDatabase;
 import com.inostudio.weather_forecast.database.City;
 import com.inostudio.weather_forecast.database.Temperature;
+import com.inostudio.weather_forecast.database.TypeWeather;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,61 +42,111 @@ import static java.io.FileDescriptor.in;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String FILE_NAME = "D:\\Study\\Projects android\\Weather-forecast\\app\\src\\main\\res\\values-ru\\cities";
-    private TextView mTextMessage;
+    //private static final String FILE_NAME = "D:\\Study\\Projects android\\Weather-forecast\\app\\src\\main\\res\\values-ru\\cities";
+    //private TextView mTextMessage;
+
+    RecyclerView mRecyclerView;
+    RecyclerView.Adapter mAdapter;
+    List<City> cities;
+    List<Temperature> temperatures;
+    List<TypeWeather> weather_types;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_city:
-                    mTextMessage.setText(R.string.title_city);
+                    //mTextMessage.setText(R.string.title_city);
+                    mAdapter = new CityAdapter(cities);
+                    mRecyclerView.setAdapter(mAdapter);
                     return true;
                 case R.id.navigation_settings:
-                    mTextMessage.setText("Навигатор настроек");
+                    //mTextMessage.setText("Навигатор настроек");
+                    mAdapter = new DetailViewAdapter(cities, temperatures, weather_types);
+                    mRecyclerView.setAdapter(mAdapter);
                     return true;
             }
             return false;
         }
     };
 
-    RecyclerView mRecyclerView;
-    RecyclerView.Adapter mAdapter;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
+        //mTextMessage = (TextView) findViewById(R.id.message);
         mRecyclerView =(RecyclerView)findViewById(R.id.cities_list);
 
         AppDatabase db= Room.databaseBuilder(getApplicationContext(),AppDatabase.class,"weather-forecast")
-              .allowMainThreadQueries().build();
+                .allowMainThreadQueries().build();
 
-
-       List<City> cities =db.mCityDao().getAllCities();
-
-
+        cities = db.mCityDao().getAllCities();
+        temperatures = db.mTemperatureDao().getAllTemperature();
+        weather_types = db.mWeatherDao().getAllTypeWeathers();
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter =new CityAdapter(swelling_database(cities));
+        if (cities.size() == 0) {
+            //mAdapter = new CityAdapter(swelling_database(cities));
+            String[] list_cities=getResources().getStringArray(R.array.cities);
+            String[] list_temperatures=getResources().getStringArray(R.array.temperature);
+            String[] list_weather_types=getResources().getStringArray(R.array.type_weather);
+            String[] list_weather_descr=getResources().getStringArray(R.array.descr_weather);
+            for (String list_city : list_cities) {
+                City city = new City(list_city);
+                cities.add(city);
+                db.mCityDao().insertAll(city);
+            }
+            for (String list_temperature : list_temperatures) {
+                Temperature temperature = new Temperature(list_temperature);
+                temperatures.add(temperature);
+                db.mTemperatureDao().insertAll(temperature);
+            }
+            for (int i = 0; i < list_weather_types.length; i++) {
+                TypeWeather weather_type = new TypeWeather(list_weather_types[i], list_weather_descr[i]);
+                weather_types.add(weather_type);
+                db.mWeatherDao().insertAll(weather_type);
+            }
+            /*for (String list_weather_type : list_weather_types) {
+                TypeWeather weather_type = new TypeWeather(list_weather_type);
+                cities.add(weather_type);
+                db.mCityDao().insertAll(weather_type);
+            }*/
+            Log.d("LOG","Loaded from file");
+        } else {
+            Log.d("LOG","Loaded from db");
+        }
+        mAdapter = new CityAdapter(cities);
         mRecyclerView.setAdapter(mAdapter);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
-    public List<City> swelling_database(List<City> cities){
+    public void doPrint() {
+        PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
+
+        String jobName = "Jobname";
+
+        PrintAttributes.Builder builder = new PrintAttributes.Builder();
+        builder.setMediaSize(PrintAttributes.MediaSize.ISO_A4);
+        builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME);
+        PrintAttributes attr = builder.build();
+
+        //printManager.print(jobName, new PrintDocumentAdapterForFiles(ctx, new File(filePath), jobName), attr );
+    }
+
+    /*public List<City> swelling_database(List<City> cities){
         String[] list_cities=getResources().getStringArray(R.array.cities);
         for (int i = 0; i <list_cities.length ; i++) {
             City city =new City(list_cities[i]);
             cities.add(city);
             Log.d("LOG",city.getId()+" = "+city.getCityName());
+
+            db.mCityDao().insertAll(city);
         }
         return cities;
-    }
+    }*/
 
 
 

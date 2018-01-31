@@ -3,14 +3,30 @@
     <string name="title_city">Город</string>
     <string name="title_settings">Настройки</string>
 
-
     <string-array name="cities">
-
-        <item>Москва</item>
+        <item>Таганрог</item>
         <item>Ростов на Дону</item>
-        <item>Воронеж</item>
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Челябинск</item>
+        <item>Чита</item>
+        <item>Сочи</item>
         <item>Краснодар</item>
+        <item>Вологда</item>
+        <item>Череповец</item>
+    </string-array>
 
+    <string-array name="temperature">
+        <item>0</item>
+        <item>0</item>
+        <item>-5</item>
+        <item>-5</item>
+        <item>-10</item>
+        <item>-10</item>
+        <item>+5</item>
+        <item>+5</item>
+        <item>-15</item>
+        <item>-15</item>
     </string-array>
 
     <string-array name="type_weather">
@@ -19,8 +35,23 @@
         <item>Снег</item>
         <item>Жарко</item>
         <item>Ясно</item>
+        <item>Облачно</item>
+        <item>Дождь</item>
+        <item>Снег</item>
+        <item>Жарко</item>
+        <item>Ясно</item>
     </string-array>
 
-
-
+    <string-array name="descr_weather">
+        <item>Облачная погода</item>
+        <item>Дождливая погода</item>
+        <item>Снег идет</item>
+        <item>Жаркая погода</item>
+        <item>Ясная погода</item>
+        <item>Облачная погода</item>
+        <item>Дождливая погода</item>
+        <item>Снег идет</item>
+        <item>Жаркая погода</item>
+        <item>Ясная погода</item>
+    </string-array>
 </resources>

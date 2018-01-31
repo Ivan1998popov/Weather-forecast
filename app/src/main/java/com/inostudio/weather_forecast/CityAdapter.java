@@ -1,6 +1,7 @@
 package com.inostudio.weather_forecast;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,8 +31,14 @@ class CityAdapter extends android.support.v7.widget.RecyclerView.Adapter<CityAda
     }
 
     @Override
-    public void onBindViewHolder(CityAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(CityAdapter.ViewHolder holder, final int position) {
         holder.cityName.setText( cities.get(position).getCityName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("LOG",position + " pressed");
+            }
+        });
     }
 
 

@@ -2,4 +2,56 @@
     <string name="app_name">Weather Forecast</string>
     <string name="title_city">City</string>
     <string name="title_settings">Settings</string>
+
+    <string-array name="cities">
+        <item>Taganrog</item>
+        <item>Rostov-na-Donu</item>
+        <item>Moscow</item>
+        <item>Saint-Petersburg</item>
+        <item>Chelyabinsk</item>
+        <item>Chita</item>
+        <item>Sochi</item>
+        <item>Krasnodar</item>
+        <item>Vologda</item>
+        <item>Cherepovets</item>
+    </string-array>
+
+    <string-array name="temperature">
+        <item>0</item>
+        <item>0</item>
+        <item>-5</item>
+        <item>-5</item>
+        <item>-10</item>
+        <item>-10</item>
+        <item>+5</item>
+        <item>+5</item>
+        <item>-15</item>
+        <item>-15</item>
+    </string-array>
+
+    <string-array name="type_weather">
+        <item>Cloudy</item>
+        <item>Rainy</item>
+        <item>Snowy</item>
+        <item>Hot</item>
+        <item>Clear</item>
+        <item>Cloudy</item>
+        <item>Rainy</item>
+        <item>Snowy</item>
+        <item>Hot</item>
+        <item>Clear</item>
+    </string-array>
+
+    <string-array name="descr_weather">
+        <item>Cloudy weather</item>
+        <item>Rainy weather</item>
+        <item>Snowy weather</item>
+        <item>Hot weather</item>
+        <item>Clear weather</item>
+        <item>Cloudy weather</item>
+        <item>Rainy weather</item>
+        <item>Snowy weather</item>
+        <item>Hot weather</item>
+        <item>Clear weather</item>
+    </string-array>
 </resources>
