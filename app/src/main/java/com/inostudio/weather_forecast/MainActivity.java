@@ -148,6 +148,19 @@ public class MainActivity extends AppCompatActivity {
         return cities;
     }*/
 
+    /*
+    ResizableImageView example in XML
 
+    <view
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.inostudio.weather_forecast.ResizableImageView"
+            android:id="@+id/photo"
+            android:layout_gravity="center"
+            android:background="@drawable/jobs_portrait"
+            android:clickable="true"
+       		android:onClick="update" />
+
+    * */
 
 }
