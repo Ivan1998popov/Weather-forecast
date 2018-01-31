@@ -2,4 +2,25 @@
     <string name="app_name">Прогноз погоды</string>
     <string name="title_city">Город</string>
     <string name="title_settings">Настройки</string>
+
+
+    <string-array name="cities">
+
+        <item>Москва</item>
+        <item>Ростов на Дону</item>
+        <item>Воронеж</item>
+        <item>Краснодар</item>
+
+    </string-array>
+
+    <string-array name="type_weather">
+        <item>Облачно</item>
+        <item>Дождь</item>
+        <item>Снег</item>
+        <item>Жарко</item>
+        <item>Ясно</item>
+    </string-array>
+
+
+
 </resources>

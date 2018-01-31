@@ -1,8 +1,14 @@
 package com.inostudio.weather_forecast.database;
 
-/**
- * Created by Иван on 30.01.2018.
- */
+import android.arch.persistence.room.Database;
+import android.arch.persistence.room.RoomDatabase;
 
-public class AppDatabase {
+
+@Database(entities = {City.class},version = 1)
+public abstract  class AppDatabase extends RoomDatabase {
+
+    public abstract CityDao mCityDao();
+    public abstract WeatherDao mWeatherDao();
+    public abstract TemperatureDao mTemperatureDao();
+
 }
