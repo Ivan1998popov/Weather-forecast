@@ -9,15 +9,18 @@ import android.arch.persistence.room.PrimaryKey;
  */
 @Entity(tableName = "City")
 public class City  {
-    public City(String cityName) {
+    public City(String cityName, String cityDescr) {
 
         mCityName = cityName;
+        mCityDescr = cityDescr;
     }
 
     @PrimaryKey(autoGenerate = true)
     private  int id;
     @ColumnInfo(name = "city_name")
     private  String mCityName;
+    @ColumnInfo(name = "city_descr")
+    private  String mCityDescr;
 
     public int getId() {
         return id;
@@ -33,5 +36,13 @@ public class City  {
 
     public void setCityName(String cityName) {
         mCityName = cityName;
+    }
+
+    public String getCityDescr() {
+        return mCityDescr;
+    }
+
+    public void setCityDescr(String CityDescr) {
+        mCityDescr = CityDescr;
     }
 }

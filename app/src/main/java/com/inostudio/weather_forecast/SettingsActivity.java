@@ -1,20 +1,20 @@
 package com.inostudio.weather_forecast;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.widget.TextView;
 
 public class SettingsActivity extends AppCompatActivity {
+
+    private TextView mSettingsText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings_activity);
+        setContentView(R.layout.activity_settings);
 
-
+        mSettingsText = (TextView)findViewById(R.id.settings_text);
+        mSettingsText.setText("Здесь ничего нет");
 
     }
 

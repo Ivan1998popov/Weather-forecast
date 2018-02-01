@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
 import android.print.PrintManager;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
@@ -20,6 +21,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.inostudio.weather_forecast.database.AppDatabase;
@@ -92,32 +94,47 @@ public class StartActivity extends AppCompatActivity {
     }
 
     public void doPrint() {
+        // Get a PrintManager instance
         PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
 
-        String jobName = "Jobname";
+        PrintDocumentAdapter printAdapter;
 
-        PrintAttributes.Builder builder = new PrintAttributes.Builder();
-        builder.setMediaSize(PrintAttributes.MediaSize.ISO_A4);
-        builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME);
-        PrintAttributes attr = builder.build();
+        // Set job name, which will be displayed in the print queue
+        String jobName = getString(R.string.app_name) + " Document";
 
-        //printManager.print(jobName, new PrintDocumentAdapterForFiles(ctx, new File(filePath), jobName), attr );
+        WebView mWebView = new WebView(this);
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            printAdapter = mWebView.createPrintDocumentAdapter(jobName);
+        }
+        else {
+            printAdapter = mWebView.createPrintDocumentAdapter();
+        }
+        // Start a print job, passing in a PrintDocumentAdapter implementation
+        // to handle the generation of a print document
+        if (printManager != null) {
+            printManager.print(jobName, printAdapter,null);
+        }
     }
 
     public List<City> swelling_database(List<City> cities,AppDatabase db){
         if (cities.size() == 0) {
-            String[] list_cities=getResources().getStringArray(R.array.cities);
-            String[] list_temperatures=getResources().getStringArray(R.array.temperature);
-            String[] list_weather_types=getResources().getStringArray(R.array.type_weather);
-            String[] list_weather_descr=getResources().getStringArray(R.array.descr_weather);
-            String[] cityImage_path=getResources().getStringArray(R.array.city_path_image);
-            for (String list_city : list_cities) {
-                City city = new City(list_city);
+            String[] list_cities = getResources().getStringArray(R.array.cities);
+            String[] list_city_descr = getResources().getStringArray(R.array.descr_city);
+            String[] list_temperatures = getResources().getStringArray(R.array.temperature);
+            String[] list_wind_speeds = getResources().getStringArray(R.array.windSpeed);
+            String[] list_pressures = getResources().getStringArray(R.array.pressure);
+            String[] list_humidities = getResources().getStringArray(R.array.humidity);
+            String[] list_weather_types = getResources().getStringArray(R.array.type_weather);
+            String[] list_weather_descr = getResources().getStringArray(R.array.descr_weather);
+            String[] cityImage_path = getResources().getStringArray(R.array.city_path_image);
+            for (int i = 0; i < list_cities.length; i++) {
+                City city = new City(list_cities[i], list_city_descr[i]);
                 cities.add(city);
                 db.mCityDao().insertAll(city);
             }
-            for (String list_temperature : list_temperatures) {
-                Temperature temperature = new Temperature(list_temperature);
+            for (int i = 0; i < list_temperatures.length; i++) {
+                Temperature temperature = new Temperature(list_temperatures[i], list_wind_speeds[i],
+                        list_pressures[i], list_humidities[i]);
                 temperatures.add(temperature);
                 db.mTemperatureDao().insertAll(temperature);
             }
@@ -126,8 +143,8 @@ public class StartActivity extends AppCompatActivity {
                 weather_types.add(weather_type);
                 db.mWeatherDao().insertAll(weather_type);
             }
-            for (int i = 0; i <cityImage_path.length ; i++) {
-                ImageCity imageCity=new ImageCity(cityImage_path[i]);
+            for (String aCityImage_path : cityImage_path) {
+                ImageCity imageCity = new ImageCity(aCityImage_path);
                 image_list.add(imageCity);
                 db.mImageDao().insertAll(imageCity);
             }
@@ -138,20 +155,4 @@ public class StartActivity extends AppCompatActivity {
         }
         return cities;
     }
-
-    /*
-    ResizableImageView example in XML
-
-    <view
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="com.inostudio.weather_forecast.ResizableImageView"
-            android:id="@+id/photo"
-            android:layout_gravity="center"
-            android:background="@drawable/jobs_portrait"
-            android:clickable="true"
-       		android:onClick="update" />
-
-    * */
-
 }

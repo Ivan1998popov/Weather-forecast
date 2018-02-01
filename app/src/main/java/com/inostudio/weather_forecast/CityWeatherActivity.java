@@ -1,6 +1,7 @@
 package com.inostudio.weather_forecast;
 
 import android.arch.persistence.room.Room;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ public class CityWeatherActivity extends AppCompatActivity {
 
     public static final String WEATHER = "weather";
 
-    private TextView mCityName ,mTemperature,mTypeWeather,mDescriptionWeather;
+    private TextView mCityName ,mTemperature,mTypeWeather,mDescriptionWeather, mWindSpeed, mPressure, mHumidity;
     private ImageView mCityImage;
 
 
@@ -31,6 +32,9 @@ public class CityWeatherActivity extends AppCompatActivity {
 
         mCityName=(TextView)findViewById(R.id.city_name);
         mTemperature=(TextView)findViewById(R.id.temperature);
+        mWindSpeed=(TextView)findViewById(R.id.wind_speed);
+        mPressure=(TextView)findViewById(R.id.pressure);
+        mHumidity=(TextView)findViewById(R.id.humidity);
         mDescriptionWeather=(TextView)findViewById(R.id.description_weather);
         mTypeWeather=(TextView)findViewById(R.id.type_weather);
         mCityImage=(ImageView)findViewById(R.id.image_city);
@@ -40,7 +44,7 @@ public class CityWeatherActivity extends AppCompatActivity {
                 .allowMainThreadQueries().build();
 
         String name_city= getIntent().getStringExtra(WEATHER);
-        City city= db.mCityDao().getCity(name_city);
+        final City city= db.mCityDao().getCity(name_city);
         Temperature temperature = db.mTemperatureDao().getWeatherById(city.getId());
         TypeWeather typeWeather=db.mWeatherDao().getWeatherById(city.getId());
         ImageCity imageCity=db.mImageDao().getImageById(city.getId());
@@ -48,8 +52,19 @@ public class CityWeatherActivity extends AppCompatActivity {
         mCityImage.setImageResource(resID);
         mCityName.setText(city.getCityName());
         mTemperature.setText(temperature.getTemperature()+" °C");
+        mWindSpeed.setText(temperature.getWindSpeed()+" м/с");
+        mPressure.setText(temperature.getPressure()+" мм рт. ст.");
+        mHumidity.setText(temperature.getHumidity()+" %");
         mTypeWeather.setText(typeWeather.getWeatherName()+" : ");
         mDescriptionWeather.setText(typeWeather.getDescriptionWeather());
 
+        mCityImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),CityDescrActivity.class);
+                intent.putExtra(CityDescrActivity.DESCRIPTION,city.getCityDescr());
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 }

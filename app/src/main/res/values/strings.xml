@@ -5,7 +5,7 @@
 
     <string-array name="cities">
         <item>Taganrog</item>
-        <item>Rostov-na-Donu</item>
+        <item>Rostov on Don</item>
         <item>Moscow</item>
         <item>Saint-Petersburg</item>
         <item>Chelyabinsk</item>
@@ -14,6 +14,56 @@
         <item>Krasnodar</item>
         <item>Vologda</item>
         <item>Cherepovets</item>
+    </string-array>
+
+    <string-array name="descr_city">
+        <item>Taganrog (Russian: Таганрог, IPA: [təɡɐnˈrok]) is a port city in Rostov Oblast,
+            Russia, located on the north shore of the Taganrog Bay in the Sea of Azov, several
+            kilometers west of the mouth of the Don River. As of the 2010 Census, its population
+            was 257,681.</item>
+        <item>Rostov-on-Don (Russian: Росто́в-на-Дону́, tr. Rostov-na-Donu, IPA: [rɐˈstof nə dɐˈnu])
+            is a port city and the administrative center of Rostov Oblast and the Southern Federal
+            District of Russia. It lies in the southeastern part of the East European Plain on the
+            Don River, 32 kilometers (20 mi) from the Sea of Azov. The southwestern suburbs of the
+            city abut the Don River delta. The population is just over one million people with
+            recent figures recorded as: 1,089,261 (2010 Census); 1,068,267 (2002 Census); 1,019,305 
+            (1989 Census).</item>
+        <item>Moscow (/ˈmɒskoʊ/ or /ˈmɒskaʊ/; Russian: Москва́, tr. Moskva, IPA: [mɐˈskva] (About
+            this sound listen)) is the capital and most populous city of Russia, with 12.2 million
+            residents within the city limits and 17.1 million within the urban area. Moscow has the
+            status of a Russian federal city.</item>
+        <item>Saint Petersburg (Russian: Санкт-Петербу́рг, tr. Sankt-Peterburg, IPA:
+            [ˈsankt pʲɪtʲɪrˈburk] (About this sound listen)) is Russia's second-largest city after
+            Moscow, with five million inhabitants in 2012. An important Russian port on the Baltic
+            Sea, it has a status of a federal subject (a federal city).</item>
+        <item>Chelyabinsk (Russian: Челя́бинск, IPA: [tɕɪˈlʲæbʲɪnsk] (About this sound listen)) is a
+            city and the administrative center of Chelyabinsk Oblast, Russia, located in the
+            northeast of the oblast, 210 kilometers (130 mi) south of Yekaterinburg, just to the
+            east of the Ural Mountains, on the Miass River, on the border of Europe and Asia.
+            Population: 1,130,132 (2010 Census); 1,077,174 (2002 Census); 1,141,777 (1989 Census).</item>
+        <item>Chita (Russian: Чита, IPA: [tɕɪˈta]) is a city and the administrative center of
+            Zabaykalsky Krai, Russia, located at the confluence of the Chita and Ingoda Rivers and
+            on the Trans-Siberian Railway, 900 kilometers (560 mi) east of Irkutsk. Population:
+            324,444 (2010 Census); 316,643 (2002 Census); 365,754 (1989 Census).</item>
+        <item>Sochi (Russian: Со́чи, IPA: [ˈsotɕɪ] (About this sound listen)) is a city in Krasnodar
+            Krai, Russia, located on the Black Sea coast near the border between Georgia/Abkhazia
+            and Russia. The Greater Sochi area, which includes territories and localities
+            subordinated to Sochi proper, has a total area of 3,526 square kilometers (1,361 sq mi)
+            and sprawls for 145 kilometers (90 mi) along the shores of the Black Sea near the
+            Caucasus Mountains. The area of the city proper is 176.77 square kilometers (68.25 sq mi).</item>
+        <item>Krasnodar (Russian: Краснода́р, IPA: [krəsnɐˈdar]) is a city and the administrative
+            center of Krasnodar Krai, Russia, located on the Kuban River, approximately 148
+            kilometers (92 mi) northeast of the Black Sea port of Novorossiysk. As of the 2010
+            Census, its population was 744,995.</item>
+        <item>Vologda (Russian: Вологда, IPA: [ˈvoləɡdə]) is a city and the administrative,
+            cultural, and scientific center of Vologda Oblast, Russia, located on the Vologda River
+            within the watershed of the Northern Dvina. Population: 301,755 (2010 Census); 293,046
+            (2002 Census); 282,802 (1989 Census).</item>
+        <item>Cherepovets (Russian: Череповец, IPA: [tɕɪrʲɪpɐˈvʲɛts]) is a city in Vologda Oblast,
+            Russia, located in the west of the oblast on the banks of the Sheksna River (a
+            tributary of the Volga River) and on the shores of the Rybinsk Reservoir. As of the
+            2010 Census, its population was 312,310, making it the most populous city in the oblast
+            .</item>
     </string-array>
 
     <string-array name="temperature">
@@ -27,6 +77,45 @@
         <item>+5</item>
         <item>-15</item>
         <item>-15</item>
+    </string-array>
+
+    <string-array name="windSpeed">
+        <item>2.6</item>
+        <item>3</item>
+        <item>5</item>
+        <item>5</item>
+        <item>2</item>
+        <item>4</item>
+        <item>1</item>
+        <item>0</item>
+        <item>5</item>
+        <item>3.8</item>
+    </string-array>
+
+    <string-array name="pressure">
+        <item>767</item>
+        <item>760</item>
+        <item>767</item>
+        <item>770</item>
+        <item>767</item>
+        <item>767</item>
+        <item>762</item>
+        <item>763</item>
+        <item>765</item>
+        <item>764</item>
+    </string-array>
+
+    <string-array name="humidity">
+        <item>87</item>
+        <item>90</item>
+        <item>87</item>
+        <item>76</item>
+        <item>87</item>
+        <item>79</item>
+        <item>67</item>
+        <item>80</item>
+        <item>82</item>
+        <item>99</item>
     </string-array>
 
     <string-array name="type_weather">
@@ -54,5 +143,19 @@
         <item>Hot weather</item>
         <item>Clear weather</item>
     </string-array>
+
+    <string-array name="city_path_image">
+        <item>taganrog</item>
+        <item>rostovondon</item>
+        <item>moscow</item>
+        <item>saintpetersburg</item>
+        <item>chelyabinsk</item>
+        <item>chita</item>
+        <item>sochi</item>
+        <item>krasnodar</item>
+        <item>vologda</item>
+        <item>cherepovets</item>
+    </string-array>
+
     <string name="title_activity_settings">SettingsActivity</string>
 </resources>

@@ -26,6 +26,8 @@
             />
         <activity android:name=".SettingsActivity"
             android:parentActivityName=".StartActivity"></activity>
+        <activity android:name=".CityDescrActivity"
+            android:parentActivityName=".CityWeatherActivity"></activity>
     </application>
 
 </manifest>
