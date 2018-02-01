@@ -10,6 +10,12 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity(tableName = "ImageCity")
 public class ImageCity {
 
+    public ImageCity(){}
+    public ImageCity(String imageCity) {
+
+        pathPicture = imageCity;
+    }
+
     @PrimaryKey(autoGenerate = true)
     private int id;
 

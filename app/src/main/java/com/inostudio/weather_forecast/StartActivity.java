@@ -6,6 +6,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.print.PrintAttributes;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 
 import com.inostudio.weather_forecast.database.AppDatabase;
 import com.inostudio.weather_forecast.database.City;
+import com.inostudio.weather_forecast.database.ImageCity;
 import com.inostudio.weather_forecast.database.Temperature;
 import com.inostudio.weather_forecast.database.TypeWeather;
 
@@ -48,6 +50,7 @@ public class StartActivity extends AppCompatActivity {
     List<City> cities;
     List<Temperature> temperatures;
     List<TypeWeather> weather_types;
+    List<ImageCity> image_list;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -59,8 +62,7 @@ public class StartActivity extends AppCompatActivity {
                     mRecyclerView.setAdapter(mAdapter);
                     return true;
                 case R.id.navigation_settings:
-                    mAdapter = new DetailViewAdapter(cities, temperatures, weather_types);
-                    mRecyclerView.setAdapter(mAdapter);
+                    startActivity(new Intent(StartActivity.this,SettingsActivity.class));
                     return true;
             }
             return false;
@@ -80,7 +82,7 @@ public class StartActivity extends AppCompatActivity {
         cities = db.mCityDao().getAllCities();
         temperatures = db.mTemperatureDao().getAllTemperature();
         weather_types = db.mWeatherDao().getAllTypeWeathers();
-
+        image_list=db.mImageDao().getAllImageCity();
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         mAdapter = new CityAdapter(swelling_database(cities,db));
@@ -108,6 +110,7 @@ public class StartActivity extends AppCompatActivity {
             String[] list_temperatures=getResources().getStringArray(R.array.temperature);
             String[] list_weather_types=getResources().getStringArray(R.array.type_weather);
             String[] list_weather_descr=getResources().getStringArray(R.array.descr_weather);
+            String[] cityImage_path=getResources().getStringArray(R.array.city_path_image);
             for (String list_city : list_cities) {
                 City city = new City(list_city);
                 cities.add(city);
@@ -122,6 +125,11 @@ public class StartActivity extends AppCompatActivity {
                 TypeWeather weather_type = new TypeWeather(list_weather_types[i], list_weather_descr[i]);
                 weather_types.add(weather_type);
                 db.mWeatherDao().insertAll(weather_type);
+            }
+            for (int i = 0; i <cityImage_path.length ; i++) {
+                ImageCity imageCity=new ImageCity(cityImage_path[i]);
+                image_list.add(imageCity);
+                db.mImageDao().insertAll(imageCity);
             }
 
             Log.d("LOG","Loaded from file");

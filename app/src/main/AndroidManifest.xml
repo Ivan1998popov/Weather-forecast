@@ -20,7 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CityWeatherActivity"></activity>
+        <activity
+            android:name=".CityWeatherActivity"
+            android:parentActivityName=".StartActivity"
+            />
+        <activity android:name=".SettingsActivity"
+            android:parentActivityName=".StartActivity"></activity>
     </application>
 
 </manifest>

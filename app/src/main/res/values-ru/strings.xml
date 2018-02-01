@@ -54,4 +54,18 @@
         <item>Жаркая погода</item>
         <item>Ясная погода</item>
     </string-array>
+
+
+    <string-array name="city_path_image">
+        <item>taganrog</item>
+        <item>rostovondon</item>
+        <item>moscow</item>
+        <item>saintpetersburg</item>
+        <item>chelyabinsk</item>
+        <item>chita</item>
+        <item>sochi</item>
+        <item>krasnodar</item>
+        <item>vologda</item>
+        <item>cherepovets</item>
+    </string-array>
 </resources>
