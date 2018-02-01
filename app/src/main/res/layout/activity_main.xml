@@ -6,7 +6,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inostudio.weather_forecast.MainActivity">
+    tools:context="com.inostudio.weather_forecast.StartActivity">
 
 
     <android.support.v7.widget.RecyclerView

@@ -8,17 +8,16 @@ import android.arch.persistence.room.Query;
 import java.util.List;
 
 /**
- * Created by Иван on 30.01.2018.
+ * Created by Иван on 01.02.2018.
  */
 @Dao
+public interface ImageDao {
+    @Query("SELECT * FROM ImageCity")
+    List<ImageCity> getAllImageCity();
 
-public interface CityDao {
-    @Query("SELECT * FROM City")
-    List<City> getAllCities();
-
-    @Query("SELECT *FROM City  WHERE city_name= :city")
-    City getCity(String city);
+    @Query("SELECT * FROM ImageCity WHERE id = :ID")
+    ImageCity getImageById(int ID);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAll(City  cities);
+    void insertAll(ImageCity... imageCities);
 }

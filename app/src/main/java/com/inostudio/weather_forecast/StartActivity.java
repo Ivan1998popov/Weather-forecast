@@ -40,10 +40,8 @@ import java.util.List;
 import static android.provider.Telephony.Mms.Part.FILENAME;
 import static java.io.FileDescriptor.in;
 
-public class MainActivity extends AppCompatActivity {
+public class StartActivity extends AppCompatActivity {
 
-    //private static final String FILE_NAME = "D:\\Study\\Projects android\\Weather-forecast\\app\\src\\main\\res\\values-ru\\cities";
-    //private TextView mTextMessage;
 
     RecyclerView mRecyclerView;
     RecyclerView.Adapter mAdapter;
@@ -57,12 +55,10 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_city:
-                    //mTextMessage.setText(R.string.title_city);
                     mAdapter = new CityAdapter(cities);
                     mRecyclerView.setAdapter(mAdapter);
                     return true;
                 case R.id.navigation_settings:
-                    //mTextMessage.setText("Навигатор настроек");
                     mAdapter = new DetailViewAdapter(cities, temperatures, weather_types);
                     mRecyclerView.setAdapter(mAdapter);
                     return true;
@@ -76,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //mTextMessage = (TextView) findViewById(R.id.message);
         mRecyclerView =(RecyclerView)findViewById(R.id.cities_list);
 
         AppDatabase db= Room.databaseBuilder(getApplicationContext(),AppDatabase.class,"weather-forecast")
@@ -87,8 +82,28 @@ public class MainActivity extends AppCompatActivity {
         weather_types = db.mWeatherDao().getAllTypeWeathers();
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        mAdapter = new CityAdapter(swelling_database(cities,db));
+        mRecyclerView.setAdapter(mAdapter);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+
+    public void doPrint() {
+        PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
+
+        String jobName = "Jobname";
+
+        PrintAttributes.Builder builder = new PrintAttributes.Builder();
+        builder.setMediaSize(PrintAttributes.MediaSize.ISO_A4);
+        builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME);
+        PrintAttributes attr = builder.build();
+
+        //printManager.print(jobName, new PrintDocumentAdapterForFiles(ctx, new File(filePath), jobName), attr );
+    }
+
+    public List<City> swelling_database(List<City> cities,AppDatabase db){
         if (cities.size() == 0) {
-            //mAdapter = new CityAdapter(swelling_database(cities));
             String[] list_cities=getResources().getStringArray(R.array.cities);
             String[] list_temperatures=getResources().getStringArray(R.array.temperature);
             String[] list_weather_types=getResources().getStringArray(R.array.type_weather);
@@ -108,45 +123,13 @@ public class MainActivity extends AppCompatActivity {
                 weather_types.add(weather_type);
                 db.mWeatherDao().insertAll(weather_type);
             }
-            /*for (String list_weather_type : list_weather_types) {
-                TypeWeather weather_type = new TypeWeather(list_weather_type);
-                cities.add(weather_type);
-                db.mCityDao().insertAll(weather_type);
-            }*/
+
             Log.d("LOG","Loaded from file");
         } else {
             Log.d("LOG","Loaded from db");
         }
-        mAdapter = new CityAdapter(cities);
-        mRecyclerView.setAdapter(mAdapter);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
-
-    public void doPrint() {
-        PrintManager printManager = (PrintManager) getSystemService(Context.PRINT_SERVICE);
-
-        String jobName = "Jobname";
-
-        PrintAttributes.Builder builder = new PrintAttributes.Builder();
-        builder.setMediaSize(PrintAttributes.MediaSize.ISO_A4);
-        builder.setColorMode(PrintAttributes.COLOR_MODE_MONOCHROME);
-        PrintAttributes attr = builder.build();
-
-        //printManager.print(jobName, new PrintDocumentAdapterForFiles(ctx, new File(filePath), jobName), attr );
-    }
-
-    /*public List<City> swelling_database(List<City> cities){
-        String[] list_cities=getResources().getStringArray(R.array.cities);
-        for (int i = 0; i <list_cities.length ; i++) {
-            City city =new City(list_cities[i]);
-            cities.add(city);
-            Log.d("LOG",city.getId()+" = "+city.getCityName());
-
-            db.mCityDao().insertAll(city);
-        }
         return cities;
-    }*/
+    }
 
     /*
     ResizableImageView example in XML

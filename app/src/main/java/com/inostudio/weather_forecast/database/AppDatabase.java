@@ -10,5 +10,6 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract CityDao mCityDao();
     public abstract WeatherDao mWeatherDao();
     public abstract TemperatureDao mTemperatureDao();
+    public abstract ImageDao mImageDao();
 
 }

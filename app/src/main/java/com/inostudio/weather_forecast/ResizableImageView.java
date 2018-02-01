@@ -5,7 +5,8 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class ResizableImageView extends ImageView {
+public class
+ResizableImageView extends android.support.v7.widget.AppCompatImageView {
  
 public ResizableImageView(Context context, AttributeSet attrs) {
 		super(context, attrs);
