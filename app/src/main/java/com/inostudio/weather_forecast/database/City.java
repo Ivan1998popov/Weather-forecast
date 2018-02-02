@@ -8,7 +8,7 @@ import android.arch.persistence.room.PrimaryKey;
  * Created by Иван on 30.01.2018.
  */
 @Entity(tableName = "City")
-public class City  {
+public class City {
     public City(String cityName, String cityDescr) {
 
         mCityName = cityName;
@@ -16,11 +16,11 @@ public class City  {
     }
 
     @PrimaryKey(autoGenerate = true)
-    private  int id;
+    private int id;
     @ColumnInfo(name = "city_name")
-    private  String mCityName;
+    private String mCityName;
     @ColumnInfo(name = "city_descr")
-    private  String mCityDescr;
+    private String mCityDescr;
 
     public int getId() {
         return id;

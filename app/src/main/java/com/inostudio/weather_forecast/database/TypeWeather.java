@@ -10,17 +10,17 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity(tableName = "TypeWeather")
 public class TypeWeather {
 
-   public TypeWeather(String weatherName,String descriptionWeather){
-       this.mWeatherName=weatherName;
-       this.mDescriptionWeather=descriptionWeather;
-   }
+    public TypeWeather(String weatherName, String descriptionWeather) {
+        this.mWeatherName = weatherName;
+        this.mDescriptionWeather = descriptionWeather;
+    }
 
     @PrimaryKey(autoGenerate = true)
-    private  int id;
+    private int id;
     @ColumnInfo(name = "weather_name")
-    private  String mWeatherName;
-    @ColumnInfo(name ="weather_description")
-    private  String mDescriptionWeather;
+    private String mWeatherName;
+    @ColumnInfo(name = "weather_description")
+    private String mDescriptionWeather;
 
 
     public int getId() {

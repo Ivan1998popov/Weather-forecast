@@ -4,7 +4,6 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-
 @Entity(tableName = "Temperature")
 public class Temperature {
     public Temperature(String temperature, String windSpeed, String pressure, String humidity) {
@@ -15,15 +14,15 @@ public class Temperature {
     }
 
     @PrimaryKey(autoGenerate = true)
-    private  int id;
+    private int id;
     @ColumnInfo(name = "temperature")
-    private  String temperature;
+    private String temperature;
     @ColumnInfo(name = "wind_speed")
-    private  String windSpeed;
+    private String windSpeed;
     @ColumnInfo(name = "pressure")
-    private  String pressure;
+    private String pressure;
     @ColumnInfo(name = "humidity")
-    private  String humidity;
+    private String humidity;
 
     public int getId() {
         return id;

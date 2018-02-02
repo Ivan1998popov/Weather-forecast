@@ -17,7 +17,7 @@ public class CityDescrActivity extends AppCompatActivity {
 
         String descr = getIntent().getStringExtra(DESCRIPTION);
 
-        mCityDescr = (TextView)findViewById(R.id.item_city_descr);
+        mCityDescr = (TextView) findViewById(R.id.item_city_descr);
         mCityDescr.setText(descr);
     }
 

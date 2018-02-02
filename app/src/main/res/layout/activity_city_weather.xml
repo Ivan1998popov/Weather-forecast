@@ -7,22 +7,24 @@
     tools:context="com.inostudio.weather_forecast.CityWeatherActivity">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="800px"
-            android:id="@+id/image_city"
-        android:scaleType="fitStart"/>
+        android:id="@+id/image_city"
+        android:layout_width="wrap_content"
+        android:layout_height="800px"
+        android:scaleType="fitStart" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_width="300px"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Город :"
+            android:onClick="takeScreenshot"
+            android:text="@string/city_show"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
 
         <TextView
@@ -30,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/red"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 
@@ -38,29 +40,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Температура :  "
-        android:textColor="@color/black"
-        android:textSize="25dp" />
-     <TextView
-         android:layout_width="wrap_content"
-         android:layout_height="match_parent"
-         android:id="@+id/temperature"
-         android:textColor="@color/red"
-         android:textSize="25dp"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Скорость ветра : "
+            android:text="@string/temp_show"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/red"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/wind_speed_show"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
 
 
         <TextView
@@ -68,19 +74,21 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/red"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Давление : "
+            android:text="@string/pressure_show"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
 
         <TextView
@@ -88,19 +96,21 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/red"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Влажность : "
+            android:text="@string/humidity_show"
             android:textColor="@color/black"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
 
         <TextView
@@ -108,24 +118,27 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/red"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/type_weather"
-            android:textColor="@color/black"
-            android:textSize="25dp" />
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
             android:id="@+id/description_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:textColor="@color/red"
-            android:textSize="25dp"/>
+            android:textSize="25sp" />
     </LinearLayout>
 </LinearLayout>

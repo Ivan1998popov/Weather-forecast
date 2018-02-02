@@ -160,4 +160,12 @@
         <item>vologda</item>
         <item>cherepovets</item>
     </string-array>
+
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="file_saved">Файл сохранен!</string>
+    <string name="city_show">Город :</string>
+    <string name="temp_show">Температура :</string>
+    <string name="wind_speed_show">Скорость ветра :</string>
+    <string name="pressure_show">Давление :</string>
+    <string name="humidity_show">Влажность :</string>
 </resources>
