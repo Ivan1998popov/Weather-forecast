@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/settings_text"
+    <Button
+        android:id="@+id/update_database"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/update_database"
         android:textColor="#000000"
-        android:textSize="25sp" />
+        android:textSize="24sp" />
 
 </LinearLayout>
