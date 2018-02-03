@@ -83,7 +83,6 @@ public class StartActivity extends AppCompatActivity {
             String[] cityImage_path = getResources().getStringArray(R.array.city_path_image);
             for (int i = 0; i < list_cities.length; i++) {
                 City city = new City(list_cities[i], list_city_descr[i]);
-                city.setId(i);
                 cities.add(city);
                 db.mCityDao().insertAll(city);
             }

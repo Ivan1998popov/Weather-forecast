@@ -2,6 +2,7 @@
     <string name="app_name">Прогноз погоды</string>
     <string name="title_city">Город</string>
     <string name="title_settings">Настройки</string>
+    <string name="update_database">Обновить базу данных</string>
 
     <string-array name="cities">
         <item>Таганрог</item>

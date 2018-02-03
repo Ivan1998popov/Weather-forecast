@@ -1,6 +1,7 @@
 package com.inostudio.weather_forecast.database;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
@@ -22,6 +23,10 @@ public interface TemperatureDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(Temperature... temperatures);
+
     @Update()
     void updateTemperature(Temperature temperatures);
+
+    @Delete
+    void deleteAll(List<Temperature> temperatures);
 }

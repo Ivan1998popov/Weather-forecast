@@ -1,10 +1,15 @@
 package com.inostudio.weather_forecast;
 
+import android.Manifest;
 import android.arch.persistence.room.Room;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -82,22 +87,42 @@ public class CityWeatherActivity extends AppCompatActivity {
             Bitmap bitmap = Bitmap.createBitmap(v1.getDrawingCache());
             v1.setDrawingCacheEnabled(false);
 
-            //создаем папку, если ее нет
-            File folder = new File(folderPath);
-            if (!folder.exists()) {
-                boolean mkdirs = folder.mkdirs();
-            }
+            //если есть разрешение на запись - сохраняем
+            if (hasPermissions()) {
+                //создаем папку, если ее нет
+                File folder = new File(folderPath);
+                if (!folder.exists()) {
+                    boolean mkdirs = folder.mkdirs();
+                }
 
-            //сохраняем изображение в папку
-            File imageFile = new File(imagePath);
-            FileOutputStream outputStream = new FileOutputStream(imageFile);
-            int quality = 100;
-            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
-            outputStream.flush();
-            outputStream.close();
-            Toast.makeText(this, R.string.file_saved, Toast.LENGTH_SHORT).show();
+                //сохраняем изображение в папку
+                File imageFile = new File(imagePath);
+                FileOutputStream outputStream = new FileOutputStream(imageFile);
+                int quality = 100;
+                bitmap.compress(Bitmap.CompressFormat.JPEG, quality, outputStream);
+                outputStream.flush();
+                outputStream.close();
+                Toast.makeText(this, R.string.file_saved, Toast.LENGTH_SHORT).show();
+            } else {
+                //если нет разрешения на запись - запрашиваем
+                requestPerms();
+            }
         } catch (Throwable e) {
             e.printStackTrace();
+        }
+    }
+
+    //проверка разрешения на запись
+    private boolean hasPermissions(){
+        String permission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+        return checkCallingOrSelfPermission(permission) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    //запрос разрешения на запись
+    private void requestPerms(){
+        String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            requestPermissions(permissions,123);
         }
     }
 }
