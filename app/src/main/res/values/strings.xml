@@ -17,6 +17,19 @@
         <item>Cherepovets</item>
     </string-array>
 
+    <string-array name="update_cities">
+        <item>Taganrog</item>
+        <item>Rostov on Don</item>
+        <item>Moscow</item>
+        <item>Saint-Petersburg</item>
+        <item>Chelyabinsk</item>
+        <item>Chita</item>
+        <item>Sochi</item>
+        <item>Krasnodar</item>
+        <item>Vologda</item>
+        <item>Cherepovets</item>
+    </string-array>
+
     <string-array name="descr_city">
         <item>Taganrog (Russian: Таганрог, IPA: [təɡɐnˈrok]) is a port city in Rostov Oblast,
             Russia, located on the north shore of the Taganrog Bay in the Sea of Azov, several
@@ -165,4 +178,5 @@
     <string name="wind_speed_show">Wind speed :  </string>
     <string name="pressure_show">Pressure :  </string>
     <string name="humidity_show">Humidity :  </string>
+    <string name="db_updated">Database updated!</string>
 </resources>
