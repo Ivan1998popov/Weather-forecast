@@ -160,9 +160,9 @@
 
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="file_saved">File saved!</string>
-    <string name="city_show">City :</string>
-    <string name="temp_show">Temperature :</string>
-    <string name="wind_speed_show">Wind speed :</string>
-    <string name="pressure_show">Pressure :</string>
-    <string name="humidity_show">Humidity :</string>
+    <string name="city_show">City :  </string>
+    <string name="temp_show">Temperature :  </string>
+    <string name="wind_speed_show">Wind speed :  </string>
+    <string name="pressure_show">Pressure :  </string>
+    <string name="humidity_show">Humidity :  </string>
 </resources>

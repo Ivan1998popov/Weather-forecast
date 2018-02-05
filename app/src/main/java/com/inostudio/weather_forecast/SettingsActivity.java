@@ -26,14 +26,17 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    public String cel;
     public Button btnUpdateDatabase;
     public List<City> cities;
     public List<Temperature> temperatures, temperaturesToAdd;
     public Context ctx = this;
+
+    public CyclicBarrier gate = new CyclicBarrier(11);
 
     String temperatureStr, wind_speedStr, pressureStr, humidityStr/*, weather_typeStr, weather_descrStr*/;
 
@@ -50,31 +53,36 @@ public class SettingsActivity extends AppCompatActivity {
         btnUpdateDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*for (int i = 0; i < cities.size(); i++) {
-                    //new OpenWeatherMapTask(cel, cities.get(i).getCityName()).execute();
-                    //Temperature temperature = new Temperature("9", null, null, null);
-                    //db.mTemperatureDao().updateTemperature(temperature);
-                    City city = new City(test, "");
-                    db.mCityDao().insertAll(city);
-                }*/
-
                 temperaturesToAdd = db.mTemperatureDao().getAllTemperature();
                 temperaturesToAdd.clear();
-                //db.mTemperatureDao().deleteAll(temperatures);
                 String[] list_cities = getResources().getStringArray(R.array.cities);
-                for (int i = 0; i < list_cities.length; i++) {
+                /*for (int i = 0; i < list_cities.length; i++) {
                     new OpenWeatherMapTask(cel, cities.get(i).getCityName()).execute();
-                }
-                for (int i = 0; i < temperaturesToAdd.size(); i++) {
+                }*/
+
+                /*try {
+                    gate.await();
+                } catch (InterruptedException | BrokenBarrierException e) {
+                    e.printStackTrace();
+                }*/
+
+                /*for (int i = 0; i < temperaturesToAdd.size(); i++) {
                     Temperature temp = db.mTemperatureDao().getWeatherById(i);
                     temp.setTemperature(temperaturesToAdd.get(i).getTemperature());
-                    //db.mTemperatureDao().insertAll(temperaturesToAdd.get(i));
+                    temp.setWindSpeed(temperaturesToAdd.get(i).getWindSpeed());
+                    temp.setPressure(temperaturesToAdd.get(i).getPressure());
+                    temp.setHumidity(temperaturesToAdd.get(i).getHumidity());
                     db.mTemperatureDao().updateTemperature(temp);
-                }
+                }*/
+
+                Temperature temp = db.mTemperatureDao().getWeatherById(1);
+                temp.setTemperature(String.valueOf(500));
+                db.mTemperatureDao().updateTemperature(temp);
+
+                Toast.makeText(ctx, R.string.file_saved, Toast.LENGTH_SHORT).show();
             }
         });
     }
-
     public String trans_kel(String kel) {
         double cel = 273 - Double.parseDouble(kel);
         return String.valueOf(Math.rint(cel));
@@ -87,15 +95,10 @@ public class SettingsActivity extends AppCompatActivity {
         String dummyAppid = "293da20ad6da8e2bb2974cc9760fbf87";
         String queryWeather = "http://api.openweathermap.org/data/2.5/weather?q=";
         String queryDummyKey = "&appid=" + dummyAppid;
-        //AppDatabase db;
-
-        final AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "weather-forecast")
-                .allowMainThreadQueries().build();
 
         OpenWeatherMapTask(String cel, String cityName) {
             this.cityName = cityName;
             this.cel = cel;
-            //this.db = db;
         }
 
         @Override
@@ -128,13 +131,12 @@ public class SettingsActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             Temperature temperature = new Temperature(temperatureStr, wind_speedStr,
                     pressureStr, humidityStr);
-            //db.mTemperatureDao().insertAll(temperature);
             temperaturesToAdd.add(temperature);
-            Log.d("temperatureStr", trans_kel(temperatureStr));
-            Log.d("wind_speedStr", wind_speedStr);
-            Log.d("pressureStr", pressureStr);
-            Log.d("humidityStr", humidityStr);
-            Toast.makeText(ctx, R.string.file_saved, Toast.LENGTH_SHORT).show();
+            try {
+                gate.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
+                e.printStackTrace();
+            }
         }
 
         private String sendQuery(String query) throws IOException {
