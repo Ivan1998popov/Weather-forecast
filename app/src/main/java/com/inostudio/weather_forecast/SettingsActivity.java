@@ -55,29 +55,30 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 temperaturesToAdd = db.mTemperatureDao().getAllTemperature();
                 temperaturesToAdd.clear();
-                String[] list_cities = getResources().getStringArray(R.array.cities);
-                /*for (int i = 0; i < list_cities.length; i++) {
-                    new OpenWeatherMapTask(cel, cities.get(i).getCityName()).execute();
-                }*/
+                String[] list_cities =getResources().getStringArray(R.array.update_cities);
+                for (int i = 0; i <list_cities.length; i++) {
+                    new OpenWeatherMapTask( list_cities[i]).execute();
+               }
 
-                /*try {
+                try {
                     gate.await();
                 } catch (InterruptedException | BrokenBarrierException e) {
                     e.printStackTrace();
-                }*/
+                }
 
-                /*for (int i = 0; i < temperaturesToAdd.size(); i++) {
-                    Temperature temp = db.mTemperatureDao().getWeatherById(i);
-                    temp.setTemperature(temperaturesToAdd.get(i).getTemperature());
-                    temp.setWindSpeed(temperaturesToAdd.get(i).getWindSpeed());
-                    temp.setPressure(temperaturesToAdd.get(i).getPressure());
-                    temp.setHumidity(temperaturesToAdd.get(i).getHumidity());
+                for (int i = 1; i <= temperaturesToAdd.size(); i++) {
+                    City city = db.mCityDao().getCity(list_cities[i]);
+                    Temperature temp = db.mTemperatureDao().getWeatherById(city.getId());
+                    temp.setTemperature(temperaturesToAdd.get(city.getId()).getTemperature());
+                    //db.mTemperatureDao().insertAll(temperaturesToAdd.get(i));
+                    //    temp.setPressure(temperaturesToAdd.get(i).getPressure());
+                    //   temp.setHumidity(temperaturesToAdd.get(i).getHumidity());
                     db.mTemperatureDao().updateTemperature(temp);
-                }*/
 
-                Temperature temp = db.mTemperatureDao().getWeatherById(1);
-                temp.setTemperature(String.valueOf(500));
-                db.mTemperatureDao().updateTemperature(temp);
+                }
+//                Temperature temp = db.mTemperatureDao().getWeatherById(1);
+//                temp.setTemperature(String.valueOf(500));
+//                db.mTemperatureDao().updateTemperature(temp);
 
                 Toast.makeText(ctx, R.string.file_saved, Toast.LENGTH_SHORT).show();
             }
@@ -96,9 +97,8 @@ public class SettingsActivity extends AppCompatActivity {
         String queryWeather = "http://api.openweathermap.org/data/2.5/weather?q=";
         String queryDummyKey = "&appid=" + dummyAppid;
 
-        OpenWeatherMapTask(String cel, String cityName) {
+        OpenWeatherMapTask( String cityName) {
             this.cityName = cityName;
-            this.cel = cel;
         }
 
         @Override
@@ -117,12 +117,13 @@ public class SettingsActivity extends AppCompatActivity {
             }
 
             final String finalQueryReturn = query + "\n\n" + queryReturn;
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    //textViewInfo.setText(finalQueryReturn);
-                }
-            });
+//            runOnUiThread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    //textViewInfo.setText(finalQueryReturn);
+//
+//                }
+//            });
 
             return result;
         }
@@ -132,11 +133,11 @@ public class SettingsActivity extends AppCompatActivity {
             Temperature temperature = new Temperature(temperatureStr, wind_speedStr,
                     pressureStr, humidityStr);
             temperaturesToAdd.add(temperature);
-            try {
-                gate.await();
-            } catch (InterruptedException | BrokenBarrierException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                gate.await();
+//            } catch (InterruptedException | BrokenBarrierException e) {
+//                e.printStackTrace();
+//            }
         }
 
         private String sendQuery(String query) throws IOException {
@@ -161,7 +162,6 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private String ParseJSON(String json) {
-            Temperature temperature;
             String jsonResult = "";
 
             try {

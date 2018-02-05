@@ -17,6 +17,18 @@
         <item>Череповец</item>
     </string-array>
 
+    <string-array name="update_cities">
+        <item>Taganrog</item>
+        <item>Rostov on Don</item>
+        <item>Moscow</item>
+        <item>Saint-Petersburg</item>
+        <item>Chelyabinsk</item>
+        <item>Chita</item>
+        <item>Sochi</item>
+        <item>Krasnodar</item>
+        <item>Vologda</item>
+        <item>Cherepovets</item>
+    </string-array>
     <string-array name="descr_city">
         <item>Таганро́г — город в Ростовской области, порт на берегу Азовского моря (на берегу
             Таганрогского залива, в 70 км от областного центра города Ростова-на-Дону), образует
