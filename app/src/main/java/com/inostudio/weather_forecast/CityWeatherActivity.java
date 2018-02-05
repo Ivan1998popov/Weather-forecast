@@ -55,10 +55,10 @@ public class CityWeatherActivity extends AppCompatActivity {
         int resID = getResources().getIdentifier(imageCity.getPathPicture(), "drawable", getPackageName());
         mCityImage.setImageResource(resID);
         mCityName.setText(city.getCityName());
-        mTemperature.setText(String.format("%s °C", temperature.getTemperature()));
-        mWindSpeed.setText(String.format("%s м/с", temperature.getWindSpeed()));
-        mPressure.setText(String.format("%s мм рт. ст.", temperature.getPressure()));
-        mHumidity.setText(String.format("%s %%", temperature.getHumidity()));
+        mTemperature.setText(String.format("  %s °C", temperature.getTemperature()));
+        mWindSpeed.setText(String.format("  %s м/с", temperature.getWindSpeed()));
+        mPressure.setText(String.format("  %s мм рт. ст.", temperature.getPressure()));
+        mHumidity.setText(String.format("  %s %%", temperature.getHumidity()));
         mTypeWeather.setText(String.format("%s : ", typeWeather.getWeatherName()));
         mDescriptionWeather.setText(typeWeather.getDescriptionWeather());
 
@@ -67,7 +67,7 @@ public class CityWeatherActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), CityDescrActivity.class);
-                intent.putExtra(CityDescrActivity.DESCRIPTION, city.getCityDescr());
+                intent.putExtra(CityDescrActivity.DESCRIPTION, city.getCityName());
                 view.getContext().startActivity(intent);
             }
         });

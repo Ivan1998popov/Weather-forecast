@@ -126,7 +126,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            Temperature temperature = new Temperature(trans_kel(temperatureStr), wind_speedStr,
+            Temperature temperature = new Temperature(temperatureStr, wind_speedStr,
                     pressureStr, humidityStr);
             //db.mTemperatureDao().insertAll(temperature);
             temperaturesToAdd.add(temperature);

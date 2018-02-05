@@ -32,7 +32,6 @@
             android:parentActivityName=".StartActivity"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".CityDescrActivity"
-            android:parentActivityName=".CityWeatherActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 
