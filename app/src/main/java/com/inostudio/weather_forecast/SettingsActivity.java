@@ -53,7 +53,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void updateDB(AppDatabase db) {
-        for (int i = 0; i < temperaturesToAdd.size(); i++) {
+        for (int i = 0; i <temperaturesToAdd.size(); i++) {
             db.mTemperatureDao().updateTemperature(temperaturesToAdd.get(i));
         }
 
@@ -65,7 +65,7 @@ public class SettingsActivity extends AppCompatActivity {
         return String.valueOf(Math.rint(cel));
     }
 
-    private class OpenWeatherMapTask extends AsyncTask<Void, Void, String> {
+    public  class OpenWeatherMapTask extends AsyncTask<Void, Void, String> {
 
         String cityName;
         String dummyAppid = "293da20ad6da8e2bb2974cc9760fbf87";
@@ -103,7 +103,7 @@ public class SettingsActivity extends AppCompatActivity {
             temperaturesToAdd.get(cityID).setWindSpeed(wind_speedStr);
             temperaturesToAdd.get(cityID).setPressure(pressureStr);
             temperaturesToAdd.get(cityID).setHumidity(humidityStr);
-            if (cityID == 9) {
+            if (cityID == 44) {
                 updateDB(db);
             }
         }

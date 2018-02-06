@@ -1,7 +1,11 @@
 package com.inostudio.weather_forecast;
 
 import android.arch.persistence.room.Room;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -66,8 +70,30 @@ public class StartActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
     }
 
+
+    protected boolean isOnline() {
+        String cs = Context.CONNECTIVITY_SERVICE;
+        ConnectivityManager cm = (ConnectivityManager)
+                getSystemService(cs);
+        if (cm.getActiveNetworkInfo() == null) {
+            return false;
+        } else  return true;
+    }
+
+//        public static boolean isOnline(Context context)
+//    {
+//        ConnectivityManager cm =
+//                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+//        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+//        if (netInfo != null && netInfo.isConnectedOrConnecting())
+//        {
+//            return true;
+//        }
+//        return false;
+//    }
     //заполнение базы данных
     public List<City> swelling_database(List<City> cities, AppDatabase db) {
         //если БД пустая, то заполняем ее данными

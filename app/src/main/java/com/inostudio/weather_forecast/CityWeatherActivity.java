@@ -52,7 +52,7 @@ public class CityWeatherActivity extends AppCompatActivity {
         Temperature temperature = db.mTemperatureDao().getWeatherById(city.getId());
         TypeWeather typeWeather = db.mWeatherDao().getWeatherById(city.getId());
         ImageCity imageCity = db.mImageDao().getImageById(city.getId());
-        int resID = getResources().getIdentifier(imageCity.getPathPicture(), "drawable", getPackageName());
+       int resID = getResources().getIdentifier(imageCity.getPathPicture(), "drawable", getPackageName());
         mCityImage.setImageResource(resID);
         mCityName.setText(city.getCityName());
         mTemperature.setText(String.format("  %s °C", temperature.getTemperature()));

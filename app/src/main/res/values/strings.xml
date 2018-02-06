@@ -5,79 +5,394 @@
     <string name="update_database">Update database</string>
 
     <string-array name="cities">
-        <item>Taganrog</item>
-        <item>Rostov on Don</item>
-        <item>Moscow</item>
-        <item>Saint-Petersburg</item>
-        <item>Chelyabinsk</item>
-        <item>Chita</item>
-        <item>Sochi</item>
-        <item>Krasnodar</item>
-        <item>Vologda</item>
-        <item>Cherepovets</item>
+        <item> Amur </item>
+        <item> Arkhangelsk </item>    
+        <item> Astrakhan </item>        
+        <item> Belgorod </item>        
+        <item> Bryansk </item>        
+        <item> Vladimir </item>        
+        <item> Volgograd </item>        
+        <item> Vologda </item>        
+        <item> Voronezh </item>        
+        <item> Ivanovo </item>        
+        <item> Irkutsk </item>        
+        <item> Kaliningrad </item>        
+        <item> Kamchatka </item>        
+        <item> Kemerovo </item>        
+        <item> Krasnodar </item>        
+        <item> Krasnoyarsk </item>        
+        <item> Kursk </item>        
+        <item> St. Petersburg </item>        
+        <item> Lipetsk </item>        
+        <item> Magadan </item>        
+        <item> Moscow </item>        
+        <item> Murmansk </item>        
+        <item> Novosibirsk </item>        
+        <item> Omsk </item>        
+        <item> Orenburg </item>        
+        <item> Penza </item>        
+        <item> Primorsk </item>        
+        <item> Pskov </item>        
+        <item> Rostov on Don </item>        
+        <item> Ryazan </item>        
+        <item> Samara </item>        
+        <item> Saratov </item>        
+        <item> North Ossetia </item>        
+        <item> Smolensk </item>        
+        <item> Stavropol </item>        
+        <item> Taganrog </item>        
+        <item> Tambov </item>        
+        <item> Tomsk </item>        
+        <item> Tula </item>        
+        <item> Tyumen </item>        
+        <item> Ulyanovsk </item>        
+        <item> Khabarovsk </item>        
+        <item> Khanty-Mansiysk </item>        
+        <item> Chelyabinsk </item>        
+        <item> Yaroslavl </item>
     </string-array>
 
     <string-array name="update_cities">
-        <item>Taganrog</item>
-        <item>Rostov on Don</item>
-        <item>Moscow</item>
-        <item>Saint-Petersburg</item>
-        <item>Chelyabinsk</item>
-        <item>Chita</item>
-        <item>Sochi</item>
-        <item>Krasnodar</item>
-        <item>Vologda</item>
-        <item>Cherepovets</item>
+        <item>Amur, RU</item>
+        <item>Arkhangelsk, RU</item>    
+        <item>Astrakhan, RU</item>        
+        <item>Belgorod, RU</item>        
+        <item>Bryansk, RU</item>        
+        <item>Vladimir, RU</item>        
+        <item>Volgograd, RU</item>        
+        <item>Vologda, RU</item>        
+        <item>Voronezh, RU</item>        
+        <item>Ivanovo, RU</item>        
+        <item>Irkutsk, RU</item>        
+        <item>Kaliningrad, RU</item>        
+        <item>Kamchatka, RU</item>        
+        <item>Kemerovo, RU</item>        
+        <item>Krasnodar, RU</item>        
+        <item>Krasnoyarsk, RU</item>        
+        <item>Kursk, RU</item>        
+        <item>Saint Petersburg, RU</item>        
+        <item>Lipetsk, RU</item>        
+        <item>Magadan, RU</item>        
+        <item>Moscow, RU</item>        
+        <item>Murmansk, RU</item>        
+        <item>Novosibirsk, RU</item>        
+        <item>Omsk, RU</item>        
+        <item>Orenburg, RU</item>        
+        <item>Penza, RU</item>        
+        <item>Primorsk, RU</item>        
+        <item>Pskov, RU</item>        
+        <item>Rostov-on-Don, RU</item>        
+        <item>Ryazan, RU</item>        
+        <item>Samara, RU</item>        
+        <item>Saratov, RU</item>        
+        <item>North Ossetia, RU</item>        
+        <item>Smolensk, RU</item>        
+        <item>Stavropol, RU</item>        
+        <item>Taganrog, RU</item>        
+        <item>Tambov, RU</item>        
+        <item>Tomsk, RU</item>        
+        <item>Tula, RU</item>        
+        <item>Tyumen, RU</item>        
+        <item>Ulyanovsk, RU</item>        
+        <item>Khabarovsk, RU</item>        
+        <item>Khanty-Mansiysk, RU</item>        
+        <item>Chelyabinsk, RU</item>        
+        <item>Yaroslavl, RU</item>
     </string-array>
 
     <string-array name="descr_city">
-        <item>Taganrog (Russian: Таганрог, IPA: [təɡɐnˈrok]) is a port city in Rostov Oblast,
-            Russia, located on the north shore of the Taganrog Bay in the Sea of Azov, several
-            kilometers west of the mouth of the Don River. As of the 2010 Census, its population
-            was 257,681.</item>
-        <item>Rostov-on-Don (Russian: Росто́в-на-Дону́, tr. Rostov-na-Donu, IPA: [rɐˈstof nə dɐˈnu])
-            is a port city and the administrative center of Rostov Oblast and the Southern Federal
-            District of Russia. It lies in the southeastern part of the East European Plain on the
-            Don River, 32 kilometers (20 mi) from the Sea of Azov. The southwestern suburbs of the
-            city abut the Don River delta. The population is just over one million people with
-            recent figures recorded as: 1,089,261 (2010 Census); 1,068,267 (2002 Census); 1,019,305 
-            (1989 Census).</item>
-        <item>Moscow (/ˈmɒskoʊ/ or /ˈmɒskaʊ/; Russian: Москва́, tr. Moskva, IPA: [mɐˈskva] (About
-            this sound listen)) is the capital and most populous city of Russia, with 12.2 million
-            residents within the city limits and 17.1 million within the urban area. Moscow has the
-            status of a Russian federal city.</item>
-        <item>Saint Petersburg (Russian: Санкт-Петербу́рг, tr. Sankt-Peterburg, IPA:
-            [ˈsankt pʲɪtʲɪrˈburk] (About this sound listen)) is Russia's second-largest city after
-            Moscow, with five million inhabitants in 2012. An important Russian port on the Baltic
-            Sea, it has a status of a federal subject (a federal city).</item>
-        <item>Chelyabinsk (Russian: Челя́бинск, IPA: [tɕɪˈlʲæbʲɪnsk] (About this sound listen)) is a
-            city and the administrative center of Chelyabinsk Oblast, Russia, located in the
-            northeast of the oblast, 210 kilometers (130 mi) south of Yekaterinburg, just to the
-            east of the Ural Mountains, on the Miass River, on the border of Europe and Asia.
-            Population: 1,130,132 (2010 Census); 1,077,174 (2002 Census); 1,141,777 (1989 Census).</item>
-        <item>Chita (Russian: Чита, IPA: [tɕɪˈta]) is a city and the administrative center of
-            Zabaykalsky Krai, Russia, located at the confluence of the Chita and Ingoda Rivers and
-            on the Trans-Siberian Railway, 900 kilometers (560 mi) east of Irkutsk. Population:
-            324,444 (2010 Census); 316,643 (2002 Census); 365,754 (1989 Census).</item>
-        <item>Sochi (Russian: Со́чи, IPA: [ˈsotɕɪ] (About this sound listen)) is a city in Krasnodar
-            Krai, Russia, located on the Black Sea coast near the border between Georgia/Abkhazia
-            and Russia. The Greater Sochi area, which includes territories and localities
-            subordinated to Sochi proper, has a total area of 3,526 square kilometers (1,361 sq mi)
-            and sprawls for 145 kilometers (90 mi) along the shores of the Black Sea near the
-            Caucasus Mountains. The area of the city proper is 176.77 square kilometers (68.25 sq mi).</item>
-        <item>Krasnodar (Russian: Краснода́р, IPA: [krəsnɐˈdar]) is a city and the administrative
-            center of Krasnodar Krai, Russia, located on the Kuban River, approximately 148
-            kilometers (92 mi) northeast of the Black Sea port of Novorossiysk. As of the 2010
-            Census, its population was 744,995.</item>
-        <item>Vologda (Russian: Вологда, IPA: [ˈvoləɡdə]) is a city and the administrative,
-            cultural, and scientific center of Vologda Oblast, Russia, located on the Vologda River
-            within the watershed of the Northern Dvina. Population: 301,755 (2010 Census); 293,046
-            (2002 Census); 282,802 (1989 Census).</item>
-        <item>Cherepovets (Russian: Череповец, IPA: [tɕɪrʲɪpɐˈvʲɛts]) is a city in Vologda Oblast,
-            Russia, located in the west of the oblast on the banks of the Sheksna River (a
-            tributary of the Volga River) and on the shores of the Rybinsk Reservoir. As of the
-            2010 Census, its population was 312,310, making it the most populous city in the oblast
-            .</item>
+         <item> Amursk is a city in Russia, the administrative center of the Amur region of the Khabarovsk Territory.
+Amursk was founded on June 19, 1958. The city is located in the northeast
+Middle Amur Lowland, on the left bank of the Amur,
+more precisely, at the intersection of its left-bank channels of the Old Amur, Padalinskaya, Galbona and Sandinskaya,
+in 328 km to the north from Khabarovsk, 45 km to the south from Komsomolsk-on-Amur. In fact, his industrial satellite.
+The city is stretched along the Sandinskaya canal for 14 km and consists of two almost equal areas.
+        </item>
+                
+        <item> Arkhangelsk is a city in the north of the European part of Russia.
+Administrative center of Arkhangelsk region and Primorsky municipal district.
+The city of regional importance, forms a municipal formation the city of Arkhangelsk with the status of the city district.
+Population: 351,488 [3] people (2017). The largest city among the regions
+Northern European Russia (Arkhangelsk, Murmansk, Vologda regions, Komi republics and Karelia).
+Founded by the decree of Ivan the Terrible in 1584 near the St. Michael's Archangel Monastery (hence the name of the city)
+        </item>
+                
+        <item> Astrakhan is a city in Russia, the administrative center of the Astrakhan region.
+The oldest economic and cultural center of the Lower Volga region and the Caspian Sea.
+It is included in the list of historical cities of Russia.
+It is a city of regional importance. Forms the city district of the city of Astrakhan.
+        </item>
+                
+        <item> Belgorod (historic Belgorod Russian, Belaya Vezha, Sarkel) is a city in the south of the middle section of the European part of Russia,
+administrative center of the Belgorod region. Located on the southern outskirts
+Central Russian Upland, on the banks of the Belgorod Reservoir, the rivers Vezelki and Seversky Donets,
+700 km south of Moscow, 40 km from the border with Ukraine.
+Forms a municipal formation city district Belgorod. Population 391 135 [2] people (2017).
+        </item>
+                
+        <item> Bryansk is a city in the Russian Federation, an administrative center
+Bryansk region; city ​​of regional importance, forms a municipal
+education city of Bryansk with the status of the city district.
+Located on the western edge of the Central Russian Upland, both
+the banks of the Desna River at the confluence of Bolva and Sněžeti into it. Population - 406 553 [1] people. (2017).
+        </item>
+                
+        <item> Vladimir is a city in Russia, the administrative center of the Vladimir region and the city district of Vladimir.
+In the XII-XIV centuries - the capital of the Grand Duchy of Vladimir.
+One of the largest tourist centers in the European part of Russia.
+It is part of the Golden Ring of Russia. The population is 356 168 people. (2017).
+        </item>
+                
+        <item> Volgograd is a city in the southeast of the European part of the Russian Federation with a population of 1 015 586 people (2017).
+The administrative center of the Volgograd region. Until 1925 it was called Tsaritsyn, from 1925 to 1961 - Stalingrad.
+Hero-city, the place of the Battle of Stalingrad. Forms the city district of Volgograd.
+        </item>
+                
+        <item> Vologda is a city in Russia, administrative, cultural, transport and scientific center
+            Vologda region, the center of the Vologda region, which is not included, having the status
+            city ​​of regional importance and forming the city district municipal formation "City
+            Vologda. "
+        </item>
+
+        4213/5000
+        <item>Vorónezh — gorod v Rossii, administrativnyy tsentr Voronezhskoy oblasti.
+Raspolozhen na beregakh Voronezhskogo vodokhranilishcha, reki Voronezh, v 8,5 kilometrakh ot
+vpadeniya yeyo v reku Don, ot Moskvy — 463 km.
+Naseleniye goroda Voronezha — 1 039 801[2] chel. (2017).
+</item>
+        <item>Ivánovo (v 1871—1932 godakh — Ivánovo-Voznesénsk) — gorod (s 1871 goda)
+v Rossii na beregu reki Uvod', administrativnyy tsentr Ivanovskoy oblasti,
+nadelon statusom gorodskogo okruga. Naseleniye — 406 933[2] chel. (2017).
+</item>
+        <item>Irkútsk — gorod v Rossii, administrativnyy tsentr Irkutskoy oblasti i
+Irkutskogo rayona, obrazuyet gorodskoy okrug gorod Irkutsk.
+Shestoy po velichine gorod Sibiri s chislennost'yu naseleniya 623 736[2] chel. (2017).
+V predelakh Irkutskoy aglomeratsii na 2016 god prozhivayet 1,1 mln chelovek.
+</item>
+        <item>Kaliningrád, do 4 iyulya 1946 goda — Konigsberg (nem. Königsberg), takzhe Korolevets
+(pol'sk. Królewiec, lit. Karaliaučius, do 1255 goda — Tvangste) — gorod v Rossii,
+administrativnyy tsentr Kaliningradskoy oblasti. Samyy zapadnyy oblastnoy tsentr strany.
+Raspolozhen pri vpadenii reki Pregoli v Kaliningradskiy zaliv. Naseleniye — 467 289[2] chel. (2017).
+</item>
+        <item>Kamchátka — poluostrov v severo-vostochnoy chasti Yevrazii na territorii Rossii.
+Omyvayetsya s zapada Okhotskim morem, s vostoka —
+Beringovym morem i Tikhim okeanom.
+Poluostrov vytyanut s severa na yug na 1200 km.
+Soyedinyayetsya s materikom uzkim (do 93 km) peresheykom — Parapol'skim dolom. Naibol'shaya shirina
+(do 440 km) — na shirote mysa Kronotskiy.
+Obshchaya ploshchad' poluostrova ~ 270 tys. km².
+</item>
+        <item>Kémerovo — gorod v Rossii, administrativnyy tsentr Kemerovskoy oblasti. V nastoyashcheye vremya zanimayet tridtsatoye mesto
+po chislennosti naseleniya i pyatidesyatoye po ploshchadi sredi gorodov Rossii.
+Raspolozhen na yuge Zapadnoy Sibiri, na oboikh beregakh rek Tomi i Iskitimki, v severnoy chasti Kuznetskogo ugol'nogo basseyna (Kuzbassa).
+Kemerovo — vazhnyy administrativnyy, ekonomicheskiy, nauchnyy, kul'turnyy, transportnyy i promyshlennyy tsentr Sibiri.
+Kemerovo — pervyy[6] po chislennosti naseleniya gorod v Kemerovskoy oblasti i plotnosti naseleniya.
+Gorod yavlyayetsya tsentrom Kemerovskoy aglomeratsii. Naseleniye — 556 920[2] chel. (2017).
+</item>
+        <item>Krasnodár (do 1920 goda — Yekaterinodár) — gorod na yuge Rossii, raspolozhennyy na
+pravom beregu reki Kubani, na rasstoyanii 120—150 kilometrov k vostoku ot Chornogo i
+Azovskogo morey, i 1350 km (po shosse) k yugu ot Moskvy.</item>
+        <item>Krasnoyársk (proiznosheniye (inf.)) — odin iz krupneyshikh gorodov Rossii, kul'turnyy, ekonomicheskiy,
+promyshlennyy i obrazovatel'nyy tsentr Tsentral'noy i Vostochnoy Sibiri.
+Administrativnyy tsentr Krasnoyarskogo kraya (vtorogo po ploshchadi sub"yekta
+Rossii) i gorodskogo okruga gorod Krasnoyarsk. Tsentr Vostochno-Sibirskogo ekonomicheskogo rayona.
+Osnovannyy v 1628 godu, yavlyayetsya krupneyshim iz starinnykh gorodov Sibiri. Vo vremena «zolotoy
+likhoradki» dolgoye vremya byl krupnym protsvetayushchim kupecheskim tsentrom Sibiri. Samyy vostochnyy gorod-millioner v Rossii.
+Gorod raspolozhen v tsentre Rossii, na oboikh beregakh Yeniseya na styke Zapadnosibirskoy ravniny,
+Srednesibirskogo ploskogor'ya i Sayanskikh gor v ushchel'ye,
+obrazovannom samymi severnymi otrogami Vostochnogo Sayana.
+Naseleniye goroda — 1 082 933[3] (2017). V Krasnoyarskoy aglomeratsii prozhivayet boleye polutora millionov zhiteley.
+</item>
+        <item>Kursk — gorod v Rossii, administrativnyy tsentr Kurskoy oblasti, a takzhe
+Kurskogo rayona. V sostav rayona ne vkhodit, yavlyayas' gorodom oblastnogo znacheniya,
+obrazuyushchim munitsipal'noye obrazovaniye gorod Kursk so statusom gorodskogo okruga.
+</item>
+        <item>Sankt-Peterbúrg (s 18 avgusta 1914 goda do 26 yanvarya 1924 goda — Petrográd, s 26
+yanvarya 1924 goda do 6 sentyabrya 1991 goda — Leningrád) — vtoroy po chislennosti
+naseleniya gorod Rossii. Gorod federal'nogo znacheniya. Administrativnyy tsentr
+Severo-Zapadnogo federal'nogo okruga i Leningradskoy oblasti. Osnovan 16 (27) maya 1703
+goda Petrom I. V 1712—1918 godakh stolitsa Rossiyskogo gosudarstva.</item>
+        <item>
+        Lipetsk is a city (since 1779) in Russia, the administrative center of the Lipetsk region.
+        It is the core of the largest Russian agglomeration with a specialization in the field of ferrous metallurgy of the full cycle,
+        industrial, agrotechnological and aviation center, resort. The population is 510 439 people. (2017).
+        The distance to Moscow is 450 km, to Voronezh - 132 km.
+                </item>
+            
+    <item> Magadan is a port city in the northeast of Russia.
+        The administrative center of the Magadan Region,
+        forms a municipal formation "the city of Magadan".
+        Population - 92 711 people. (2017).
+                </item>
+            
+    <item> Moscow (pronunciation (inf.)) - the capital of the Russian Federation, the city of the federal
+                    values, the administrative center of the Central Federal District and the center of the Moscow
+                    area, which does not include. The largest city in the population of Russia
+                    and its subject - 12,500,123 people. (2018), the most populated of the cities, completely
+                    located in Europe, is among the top ten cities in the world in terms of population.
+                    Center of the Moscow city agglomeration. </item>
+            
+    <item> Murmansk [3] (kild Murman Lann, before 1917 - Romanov-on-Murman) -
+        a city in the north-west of Russia,
+        administrative center of the Murmansk region.
+        Population - 298,096 [2] people (2017).
+        Murmansk is the largest city in the world, located behind the
+        The Arctic Circle.
+        Murmansk is located on the rocky eastern coast of the Kola Bay of the Barents Sea.
+        One of the largest ports of Russia.
+                </item>
+            
+    <item> Novosibirsk (pronunciation (inf.), until 1925 - Novo-Nikolaevsk) - the third largest
+        population of the city of Russia,
+        has the status of an urban district.
+        The administrative center of the Siberian Federal District,
+        Novosibirsk Region and the Novosibirsk Region that is part of it;
+        the city is the center of the Novosibirsk agglomeration. The largest trade, business, cultural,
+        industrial, transport and scientific center of Siberia.
+        Novosibirsk was founded in 1893, the status of the city was received in 1903.
+        The population is 1 602 915 people. (2017).
+                </item>
+            
+    <item> Omsk is one of the largest cities in Russia, located at the confluence of the Irtysh and Om rivers,
+        a large scientific, cultural, sports and industrial center. City of Labor Glory.
+        The city with a million population (1,178,391 [3] people in 2017), the second largest in terms of population in
+        Siberia and the eighth in Russia. Large transport hub:
+        from west to east through the city passes the railway Trans-Siberian Railway,
+        and from the south to the north - the navigable river Irtysh.
+                </item>
+            
+    <item> Orenburg (from 1938 to 1957 - Chkalov) is a city in Russia.
+        The administrative center of the Orenburg region.
+        Forms the city district of the city of Orenburg.
+                </item>
+            
+    <item> Penza is a city (since 1663), located on the Volga Upland in the center of the European part of Russia,
+        administrative, economic and cultural center of the Penza region (since 1939).
+        It is a city of regional importance, forms a municipal formation city district of Penza [5].
+        Population - 523,726 [1] people (2017).
+                </item>
+            
+    <item> Primorsk (until 1948 Koivisto, finnish Koivisto, from koivu, birch,
+        Bereza, Berezovsky, Bjorke from the Swedes were also called in the past. Björkö - a birch island) - a city (since 1940)
+        in Russia, in the Vyborgsky District of the Leningrad Region.
+        The city is located on the shore of the Gulf of Finland, 75 km from St. Petersburg and 48 km from Vyborg.
+        The population is 5739 people. (2017).
+                </item>
+            
+    <item> Pskov is a city (since 903 [5] [6]) in the north-west of Russia,
+        the administrative center of the Pskov region and the Pskov district, forming the city district of Pskov.
+        Located on the river Velikaya at the confluence of it with the river Pskov.
+        The population of the city is 209,840 [4] people. (2017).
+                </item>
+            
+    <item> Rostov-on-Don is the largest city in the south of the Russian Federation, administrative
+                    center of the Southern Federal District and the Rostov Region. City of military glory (2008).
+                    It is based on the reading and writing of Empress Elizabeth Petrovna from December 15, 1749. Located
+                    in the southeast of the East European Plain, on the banks of the Don River, 46 km from its place
+                    the confluence of the Azov Sea, 1092 km south of Moscow. </item>
+            
+    <item> Ryazan (pronunciation (inf.)) (until 1778 - Pereyaslavl-Ryazan) is a city in Russia,
+        administrative center of the Ryazan region. It is one of the thirty largest cities in Russia.
+        Population - 537 622 [2] people (2017).
+                </item>
+            
+    <item> Samara is a city in the Middle Volga region of Russia,
+        center of the Volga region economic region and the Samara region, forms the city district of Samara.
+        City of Labor and Military Glory (2016).
+        Population - 1 169 719 [2] people (2017),
+        the ninth largest city in Russia. Within the agglomeration
+        (the third largest population in Russia) is home to over 2.7 million people.
+                </item>
+    <item> Saratov is a city in the southeast of the European part of Russia,
+        the administrative center of the Saratov region and the Saratov region,
+        which is not included, being a city of regional importance,
+        forms a municipal entity in the city of Saratov with the status of a city district.
+        A major cultural, economic and educational center of the Volga region.
+        It is among the twenty largest cities in Russia, not being a millionaire city,
+        at the same time is the center of the Saratov agglomeration, whose population exceeds 1.2 million people.
+                </item>
+            
+    <item> The Republic of North Ossetia-Alania (the republic of Central Asia, Ististon-Alani as sounds (inf.);
+        short title: North Ossetia) - a subject of the Russian Federation [7], a republic in its composition.
+        It is part of the North Caucasus Federal District and is part of the
+        North Caucasus economic region.
+                </item>
+            
+    <item> Smolensk is a city in central Russia, an administrative, industrial and cultural center of the Smolensk region.
+        This is one of the oldest cities in Russia (the first chronicle mentions refers to the year 863).
+        He wears the title of "Hero City" (since May 6, 1985),
+        was awarded the Order of Lenin and the Order of the Patriotic War of the 1st degree, the medal "Gold Star".
+                </item>
+            
+    <item> Stavropol (from Greek σταυρός - "cross", πόλις - "city") - city [5],
+        administrative center of the Stavropol Territory of the Russian Federation. Cultural,
+        business and industrial (mechanical engineering, instrumentation) center of the province.
+        One of the largest cities in the North Caucasus and the North Caucasus Federal District.
+                </item>
+            
+    <item> Taganrog is a city in the Rostov region, a port on the shore of the Azov Sea (on the coast
+                    Taganrog Bay, 70 km from the regional center of the city of Rostov-on-Don), forms
+                    municipal formation "City of Taganrog" with the status of city district.
+                    It was founded by Peter the Great in 1698. Taganrog became the first naval base of Russia,
+                    the first Russian port on the open sea coast and the first city in Russia,
+                    built according to the regular plan. It is included in the list of historical settlements of Russia.
+                    The population is 250 287 people. (2017). About one hundred nationalities live in Taganrog.
+                    The largest diasporas are Greek, Jewish and Armenian.
+                    November 3, 2011 the city was awarded the honorary title "City of Military Glory", and in December
+                    2015, the Bank of Russia in a series of coins "City of Military Glory" issued a coin,
+                    dedicated to Taganrog. May 8, 2015, the grand opening of the stele "City
+                    military glory. "</item>
+            
+    <item> Tambov is a city in Russia, administrative, economic and cultural center of Tambov region, is
+        also administrative center of Tambov district, which itself does not enter, being
+        administrative-territorial unit of the city of regional importance, forming the same name
+        municipal formation city district city Tambov.
+        Located in the central part of the Oka-Don plain on the channel of the Tsna River, 480 km south of Moscow.
+        The population is 290 365 people. (2017), and the population density is 3101 people / km².
+                </item>
+            
+    <item> Tula is a city in Russia, the administrative center of the Tula region and the urban district of the city of Tula.
+        Hero City (since 1976).
+        Tula is located in the north of the Central Russian Upland on the bank of the Upa River in 193 km to the south of Moscow.
+        The length of the city from north to south is 30 km, from west to east - 25 km.
+                </item>
+            
+    <item> Tyumen is a city in Russia, an administrative center of the Tyumen region and Tyumen district,
+        in which structure does not enter. Forms the city district of Tyumen.
+        It occupies the 18th place among the cities of Russia in terms of population.
+        The first Russian city in Siberia [6] [7].
+                </item>
+            
+    <item> Ulyanovsk (in 1648-1780 - Sinbirsk, in 1780-1924 - Simbirsk) - a city in the European part of Russia,
+        administrative center of the Ulyanovsk region. It is a city of regional significance,
+        forms a municipal formation in the city of Ulyanovsk with the status of a city district.
+        Located on the Volga Upland, on the banks of the Volga River (Kuibyshev Reservoir) and
+        Sviyaga, at the point of rapprochement of their channels.
+        It is located 890 km to the east / southeast of Moscow.
+        Population: 624 518 people. (2017) (22nd place in the Russian Federation).
+                </item>
+            
+    <item> Khabarovsk is a city (since 1880) in Russia, the administrative center of the Far Eastern Federal District
+        Russia and the Khabarovsk Territory.
+        One of the largest political, educational and cultural centers of the Russian Far East.
+        The population is 616 242 people. (2017). The area of ​​the city is 386 km ².
+                </item>
+    <item> Khanty-Mansiysk (Khanty Yomvosh, Yomvҷ, Mansa Abga) is a city in Russia,
+        the administrative center of the Khanty-Mansiysk Autonomous Okrug - Ugra and the municipal district of the same name.
+        The largest of the centers of the autonomous regions of Russia and the only one of them whose population
+        exceeds 90,000 people (including the centers of the united autonomous okrugs). </item>
+            
+    <item> Chelyabinsk (pronunciation (inf.)) - the seventh by the number of inhabitants, the fourteenth for
+                    the city of the Russian Federation, the administrative center of Chelyabinsk
+                    region, urban district with intra-urban division. Population - 1 198 858 people
+                    (2017). Chelyabinsk is located on the geological boundary of the Urals and Siberia, on the eastern
+                    slope of the Ural Mountains, along both banks of the Miass River (Tobol basin). </item>
+            
+    <item> Yaroslavl is a city in Russia, the administrative center of the Yaroslavl region. Population - 608,079 [2] people (2017).
+        Yaroslavl is the third largest city in the Central Federal District of the Russian Federation.
+        The city is a transport hub from which railways and motorways diverge in the direction of Moscow, Vologda, Rybinsk,
+        Kostroma, Ivanova and Kirov. In Yaroslavl, there are also a river port and an airport. The area of ​​the city is 205.8 km ². </item>
+
     </string-array>
 
     <string-array name="temperature">
@@ -91,6 +406,41 @@
         <item>+5</item>
         <item>-15</item>
         <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-15</item>
+        <item>-5</item>
     </string-array>
 
     <string-array name="windSpeed">
@@ -103,6 +453,41 @@
         <item>1</item>
         <item>0</item>
         <item>5</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
+        <item>3.8</item>
         <item>3.8</item>
     </string-array>
 
@@ -117,6 +502,41 @@
         <item>763</item>
         <item>765</item>
         <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>764</item>
+        <item>765</item>
     </string-array>
 
     <string-array name="humidity">
@@ -129,6 +549,41 @@
         <item>67</item>
         <item>80</item>
         <item>82</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
+        <item>99</item>
         <item>99</item>
     </string-array>
 
@@ -143,6 +598,41 @@
         <item>Snowy</item>
         <item>Hot</item>
         <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
+        <item>Clear</item>
     </string-array>
 
     <string-array name="descr_weather">
@@ -156,19 +646,89 @@
         <item>Snowy weather</item>
         <item>Hot weather</item>
         <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
+        <item>Clear weather</item>
     </string-array>
 
     <string-array name="city_path_image">
-        <item>taganrog</item>
-        <item>rostovondon</item>
-        <item>moscow</item>
-        <item>saintpetersburg</item>
-        <item>chelyabinsk</item>
-        <item>chita</item>
-        <item>sochi</item>
-        <item>krasnodar</item>
-        <item>vologda</item>
-        <item>cherepovets</item>
+        <item> amur </item>
+        <item> arkhangelsk </item>    
+        <item> astrakhan </item>        
+        <item> belgorod </item>        
+        <item> briansk </item>        
+        <item> vladimir </item>        
+        <item> volgograd </item>        
+        <item> vologda </item>        
+        <item> voronezh </item>        
+        <item> ivanovo </item>        
+        <item> irkutsk </item>        
+        <item> kaliningrad </item>        
+        <item> kamchatka </item>        
+        <item> kemerovo </item>        
+        <item> krasnodar </item>        
+        <item> krasnoyarsk </item>        
+        <item> kursk </item>        
+        <item>saintpetersburg</item>      
+        <item> lipetsk </item>        
+        <item> magadan </item>        
+        <item> moscow </item>        
+        <item> murmansk </item>        
+        <item> novosibirsk </item>        
+        <item> omsk </item>        
+        <item> orenburg </item>        
+        <item> penza </item>        
+        <item> primorsk </item>        
+        <item> pskov </item>        
+        <item>rostovondon</item>    
+        <item> ryazan </item>        
+        <item> samara </item>        
+        <item> saratov </item>        
+        <item> northossetia </item>        
+        <item> smolensk </item>        
+        <item> stavropol </item>        
+        <item> taganrog </item>        
+        <item> tambov </item>        
+        <item> tomsk </item>        
+        <item> tula </item>        
+        <item> tyumen </item>        
+        <item> ulyanovsk </item>        
+        <item> habarovsk </item>        
+        <item> khantymansiysk </item>        
+        <item> chelyabinsk </item>        
+        <item> yaroslavl </item>
     </string-array>
 
     <string name="title_activity_settings">SettingsActivity</string>
