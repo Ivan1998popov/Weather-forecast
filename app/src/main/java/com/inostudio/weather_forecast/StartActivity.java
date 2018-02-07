@@ -74,14 +74,14 @@ public class StartActivity extends AppCompatActivity {
     }
 
 
-    protected boolean isOnline() {
-        String cs = Context.CONNECTIVITY_SERVICE;
-        ConnectivityManager cm = (ConnectivityManager)
-                getSystemService(cs);
-        if (cm.getActiveNetworkInfo() == null) {
-            return false;
-        } else  return true;
-    }
+//    protected boolean isOnline() {
+//        String cs = Context.CONNECTIVITY_SERVICE;
+//        ConnectivityManager cm = (ConnectivityManager)
+//                getSystemService(cs);
+//        if (cm.getActiveNetworkInfo() == null) {
+//            return false;
+//        } else  return true;
+//    }
 
 //        public static boolean isOnline(Context context)
 //    {
